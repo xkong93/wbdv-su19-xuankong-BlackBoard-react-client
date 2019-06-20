@@ -1,0 +1,42 @@
+[
+  {
+    "id": "123",
+    "title": "CS5610",
+    "owner": "me",
+    "ModifiedDate": "Today"
+  },
+  {
+    "id": "234",
+    "title": "CS5200",
+    "owner": "me",
+    "ModifiedDate": "Today"
+
+  },
+  {
+    "id": "345",
+    "title": "Course 3",
+    "owner": "me",
+    "ModifiedDate": "Today"
+
+  },
+  {
+    "id": "456",
+    "title": "Course 4",
+    "owner": "me",
+   "ModifiedDate": "Today"
+
+  },
+  {
+    "id": "789",
+    "title": "Course 5",
+    "owner": "me",
+    "ModifiedDate": "Today"
+
+  },
+  {
+    "id": "999",
+    "title": "Course 6",
+    "owner": "me",
+    "ModifiedDate": "Today"
+  }
+]

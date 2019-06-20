@@ -1,0 +1,34 @@
+#brand{
+
+    color:white;
+}
+
+#header {
+  padding-top: 5px;
+  padding-bottom: 7px;
+  margin-bottom: 5px;
+}
+
+#todayRow {
+  border-bottom: 1px solid #dee2e6 !important;
+  border-left: 1px solid #dee2e6 !important;
+  border-right: 1px solid #dee2e6 !important;
+}
+
+.row.border{
+    padding: 15px;
+}
+
+.other {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.far.fa-file-alt{
+    margin-right: 15px;
+}
+
+.mt-2.btn.btn-outline-primary{
+    position:absolute;
+    
+}
