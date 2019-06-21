@@ -31,12 +31,25 @@ export default class CourseListContainer extends React.Component {
         })
     }
 
+    updateRow = (rid, newCourse) => {
+        this.courseService.updateCourse(rid, newCourse)
+            .then(() => this.courseService.findAllCourses().then(
+                (modules) => this.setState({
+                    modules: modules
+                })))
+    }
+
+    createRow = (course) => {
+        this.courseService.createCourse(course)
+            .then(modules => this.setState({
+                modules: modules
+            }))
+    }
+
+
     deleteRow = (id) => {
-        // this.setState({
-        //     courses: this.state.courses.filter(course => course.id != id)
-        // })
         this.courseService.deleteCourse(id)
-            .then(()=>this.courseService.findAllCourses()
+            .then(() => this.courseService.findAllCourses()
                 .then(courses => this.setState({
                     courses: courses
                 })))

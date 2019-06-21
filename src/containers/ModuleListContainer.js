@@ -8,8 +8,8 @@ export default class ModuleListContainer extends React.Component {
         this.moduleService = ModuleService.getInstance()
 
         this.state = {
-            module:{
-                title:"New Module"
+            module: {
+                title: "New Module"
             },
             modules: [],
         }
@@ -24,29 +24,43 @@ export default class ModuleListContainer extends React.Component {
 
     }
 
-    createModule = (courseId,module) => {
-        this.moduleService.createModuleForCourseId(courseId,module)
+    createModule = (courseId, module) => {
+        this.moduleService.createModuleForCourseId(courseId, module)
             .then(modules => this.setState({
-                modules:modules
+                modules: modules
             }))
     }
 
-    deleteModule = () => {
+    deleteModule = (mid) => {
+        this.moduleService.deleteModule(mid)
+            .then(() =>
+                this.moduleService.findAllModuleForCourseById(this.props.params.courseId)).then(
+            (modules) => this.setState({
+                modules: modules
+            })
+        )
 
     }
 
-    updateModule = () =>{
-
+    updateModule = (mid) => {
+        this.moduleService.updateModuleForCourseId(mid).then(() =>
+            this.moduleService.findAllModuleForCourseById(this.props.params.courseId)).then(
+            (modules) => this.setState({
+                modules: modules
+            })
+        )
     }
 
-    titleChange =(event) =>{
+    titleChange = (event) => {
         console.log(event.target.value)
         this.setState({
-            module:{
+            module: {
                 title: event.target.value
             }
         })
     }
+
+
     render() {
         return (
             <ModuleListComponent

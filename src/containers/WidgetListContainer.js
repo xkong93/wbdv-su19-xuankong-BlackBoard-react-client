@@ -25,7 +25,7 @@ const propsToDispatcher = dispatch => (
 
             service
                 .updateWidget(widget.id, widget)
-                .then(service
+                .then(()=>service
                     .findAllWidgets()
                     .then(widgets => dispatch({
                         type: "UPDATE_WIDGET",
@@ -37,7 +37,7 @@ const propsToDispatcher = dispatch => (
         deleteWidget: (widget) => {
             service
                 .deleteWidget(widget.id)
-                .then(service
+                .then(()=>service
                     .findAllWidgets()
                     .then(widgets => dispatch({
                         type: "DELETE_WIDGET",
@@ -58,7 +58,7 @@ const propsToDispatcher = dispatch => (
 
             service
                 .createWidget(newWidget)
-                .then(service
+                .then(()=>service
                     .findAllWidgets()
                     .then(widgets => dispatch({
                         type: "CREATE_WIDGET",

@@ -1,7 +1,7 @@
 import React from "react";
 import ModuleItem from "./ModuleItem";
 
-const ModuleListComponent = ({courses,defaultModule, modules, params, titleChange, createModule}) => {
+const ModuleListComponent = ({courses,defaultModule, modules, params, titleChange, deleteModule, createModule}) => {
 
 
     return (
@@ -22,6 +22,7 @@ const ModuleListComponent = ({courses,defaultModule, modules, params, titleChang
                 </li>
                 {modules.map(module => (
                     <ModuleItem module={module}
+                                deleteModule={deleteModule}
                                 params={params}/>
 
                 ))}
