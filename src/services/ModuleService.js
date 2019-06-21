@@ -13,8 +13,14 @@ export default class ModuleService {
     }
 
     createModuleForCourseId = (courseId, module) => {
-        module['courseId'] = courseId
-        modules.push(module)
+        return fetch(this.url + courseId + '/' + 'module',{
+            method:"POST",
+            body:JSON.stringify(module),
+            headers:{
+                'content-type': 'application/json'
+            }
+        }).then(response => response.json());
+
     }
     findAllModules = () =>{
         return fetch(this.url).then(response => response.json());

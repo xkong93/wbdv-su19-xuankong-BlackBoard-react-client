@@ -1,7 +1,6 @@
 import React from 'react'
 import CourseEditorComponent from '../components/CourseEditorComponent'
 import CourseService from '../services/CourseService'
-import ModuleService from '../services/ModuleService'
 import LessonService from '../services/LessonService'
 import TopicService from '../services/TopicService'
 import WidgetService from '../services/WidgetService'
@@ -11,12 +10,9 @@ export default class CourseEditorContainer
     extends React.Component {
     constructor(props) {
         super(props)
-        // const courseId = props.match.params.courseId;
-        // const moduleId = props.match.params.moduleId;
-        // const lessonId = props.match.params.lessonId;
-        // const topicId = props.match.params.topicId;
+        //??/
+
         this.courseService = CourseService.getInstance()
-        this.moduleService = ModuleService.getInstance()
         this.lessonService = LessonService.getInstance()
         this.topicService = TopicService.getInstance()
         // this.widgetService = WidgetService.getInstance()
@@ -32,31 +28,31 @@ export default class CourseEditorContainer
 
     componentDidMount() {
         const courseId = this.props.match.params.courseId;
-        const moduleId = this.props.match.params.moduleId;
-        const lessonId = this.props.match.params.lessonId;
-        const topicId = this.props.match.params.topicId;
-       this.courseService.findCourseById(courseId)
-           .then(courses => this.setState({
-               courses : courses,
-           }))
-        this.moduleService.findAllModuleForCourseById(courseId)
-            .then(modules => this.setState({
-                modules:modules
+        // const moduleId = this.props.match.params.moduleId;
+        // const lessonId = this.props.match.params.lessonId;
+        // const topicId = this.props.match.params.topicId;
+        this.courseService.findCourseById(courseId)
+            .then(courses => this.setState({
+                courses: courses,
             }))
-
-        this.lessonService.findAllLessonForModuleById(moduleId)
-            .then(lessons => this.setState({
-                lessons: lessons
-            }))
-
-        this.topicService.findAllTopicForLessonById(lessonId)
-            .then(topics => this.setState({
-                topics:topics
-            }))
-        // this.widgetService.findAllWidgetsForTopicById(topicId)
-        //     .then(widgets=> this.setState({
-        //         widgets:widgets
-        //     }))
+        //  // this.moduleService.findAllModuleForCourseById(courseId)
+        //  //     .then(modules => this.setState({
+        //  //         modules:modules
+        //  //     }))
+        //
+        //  this.lessonService.findAllLessonForModuleById(moduleId)
+        //      .then(lessons => this.setState({
+        //          lessons: lessons
+        //      }))
+        //
+        //  this.topicService.findAllTopicForLessonById(lessonId)
+        //      .then(topics => this.setState({
+        //          topics:topics
+        //      }))
+        //  // this.widgetService.findAllWidgetsForTopicById(topicId)
+        //  //     .then(widgets=> this.setState({
+        //  //         widgets:widgets
+        //  //     }))
 
 
     }
