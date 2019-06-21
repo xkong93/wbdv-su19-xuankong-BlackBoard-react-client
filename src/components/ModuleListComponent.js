@@ -9,9 +9,11 @@ export default class ModuleListComponent extends React.Component {
         courseId: "123",
         title: "New Module"
       },
-      modules: this.props.modules
-    };
+      // modules: this.props.modules
+    }
+
   }
+
 
   createModule = () => {
     //since this.props.modules is an array of objs, we use = instead of { this.props.modules :[this.state.module, ...this.props.modules] }
@@ -19,12 +21,10 @@ export default class ModuleListComponent extends React.Component {
     this.setState(
       (this.state.modules = [...this.state.modules, this.state.module])
     );
-    console.log(this.state.modules);
   };
 
 
   titleChange = (event) => {
-    console.log(event.target.value)
     var newId = new Date().getTime();
     this.setState({
       module: {
@@ -37,13 +37,12 @@ export default class ModuleListComponent extends React.Component {
     
     deleteModule = (id) => {
         this.setState({
-            modules:this.state.modules.filter(module => module.id != id)
+            modules:this.props.modules.filter(module => module.id != id)
         })
     }
 
     //to do edit module 
     editModule =(id) =>{
-      console.log(id);
     }
   render() {
     return (
@@ -61,7 +60,9 @@ export default class ModuleListComponent extends React.Component {
               Add Module
             </button>
           </li>
-          {this.state.modules.map(module => (
+          {
+        }
+          {this.props.modules.map(module => (
             <ModuleItem  editModule={this.editModule} deleteModule={this.deleteModule}  module={module} params={this.props.params}/>
           ))}
         </ul>

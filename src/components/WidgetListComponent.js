@@ -12,7 +12,7 @@ class WidgetListComponent extends React.Component {
     constructor(props) {
         super(props);
         this.props.loadWidgets();
-        // console.log(this.props.widgets)
+        // console.log(this.props.params)
     }
 
     render() {

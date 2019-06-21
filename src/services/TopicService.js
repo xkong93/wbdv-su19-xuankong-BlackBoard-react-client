@@ -1,27 +1,32 @@
 import topics from './topics.json'
 
-export default class TopicService{
+export default class TopicService {
 
     static myInstance = null;
+    url = 'http://localhost:8080/api/lesson/';
 
-    static getInstance(){
-        if (TopicService.myInstance == null){
+    static getInstance() {
+        if (TopicService.myInstance == null) {
             TopicService.myInstance = new TopicService();
 
         }
         return this.myInstance;
     }
+
     createTopic = (courseId, topic) => {
         topic['courseId'] = courseId
         topics.push(topic)
     }
-    findAllTopics = () => topics
+    // findAllTopics = () => topics
 
-    findAllTopicForLessonById = lessonId =>
-        topics.filter(topic => topic.lessonId == lessonId)
+    findAllTopicForLessonById = lessonId => {
+        return fetch(this.url + lessonId + '/' + 'topic')
+            .then(response => response.json())
+    }
+    // topics.filter(topic => topic.lessonId == lessonId)
 
 
-    updateTopicForLessonById  = (lessonId, newTopic) => {
+    updateTopicForLessonById = (lessonId, newTopic) => {
         topics = topics.map(
             topic => topic.lessonId == lessonId ?
                 newTopic : topic)

@@ -15,7 +15,7 @@ const propsToDispatcher = dispatch => (
     {
         loadWidgets: () => {
             service
-                .findAllWidgets()
+                .findAllWidgetsForTopicById(1)
                 .then(widgets => dispatch({
                     type: "FIND_ALL_WIDGETS",
                     widgets: widgets

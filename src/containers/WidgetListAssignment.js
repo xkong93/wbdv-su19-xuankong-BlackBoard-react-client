@@ -12,7 +12,7 @@ export default class WidgetListAssignment extends React.Component {
     render() {
         return(
             <Provider store={store}>
-                <WidgetListContainer/>
+                <WidgetListContainer params={this.props.params}/>
             </Provider>
         )
     }

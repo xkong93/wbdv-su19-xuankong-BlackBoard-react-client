@@ -3,7 +3,7 @@ import courses from './courses.json'
 class CourseService {
 
     static myInstance = null;
-    url = 'https://fathomless-meadow-74479.herokuapp.com/api/courses';
+    url = 'http://localhost:8080/api/course';
 
     static getInstance() {
         if (CourseService.myInstance == null) {

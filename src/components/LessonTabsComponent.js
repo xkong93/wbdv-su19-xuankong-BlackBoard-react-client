@@ -17,7 +17,6 @@ export default class LessonTabsComponent extends React.Component {
     this.setState(
       (this.state.lessons = [...this.state.lessons, this.state.lesson])
     );
-    console.log(this.state.lessons);
   };
 
   titleChange = (event) => {

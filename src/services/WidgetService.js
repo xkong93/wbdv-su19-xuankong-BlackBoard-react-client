@@ -2,7 +2,7 @@
 export default class WidgetService {
     static myInstance = null;
 
-    url = 'https://fathomless-meadow-74479.herokuapp.com/api/widgets';
+    url = 'http://localhost:8080/api/topic/';
 
     static getInstance() {
         if (WidgetService.myInstance == null) {
@@ -22,9 +22,9 @@ export default class WidgetService {
         }).then((response) => response.json())
     }
 
-    findAllWidgets = () => {
-        return fetch(this.url).then((response) => response.json());
-        // return widgets
+    findAllWidgetsForTopicById = (topicId) => {
+        return fetch(this.url + topicId + '/' + 'widget')
+            .then(response => response.json())        // return widgets
     }
 
 

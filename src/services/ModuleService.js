@@ -3,7 +3,7 @@ import modules from './modules.json'
 export default class ModuleService {
 
     static myInstance = null;
-
+    url = 'http://localhost:8080/api/course/';
     static getInstance() {
         if (ModuleService.myInstance == null) {
             ModuleService.myInstance =
@@ -16,11 +16,15 @@ export default class ModuleService {
         module['courseId'] = courseId
         modules.push(module)
     }
-    findAllModules = () =>
-        modules
+    findAllModules = () =>{
+        return fetch(this.url).then(response => response.json());
+    }
 
-    findAllModuleForCourseById = courseId =>
-        modules.filter(module => module.courseId == courseId)
+    findAllModuleForCourseById = courseId =>{
+               return fetch(this.url + courseId + '/' + 'module')
+            .then(response => response.json());
+    }
+        // modules.filter(module => module.courseId == courseId)
 
     updateModuleForCourseId  = (courseId, newModule) => {
         modules = modules.map(

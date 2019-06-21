@@ -14,7 +14,6 @@ export default class CourseListContainer extends React.Component {
             courses: [],
             toggle: false,
         };
-        console.log(this.state.courses)
         this.onclickChangeView = this.onclickChangeView.bind(this);
     }
 
@@ -37,13 +36,14 @@ export default class CourseListContainer extends React.Component {
         //     courses: this.state.courses.filter(course => course.id != id)
         // })
         this.courseService.deleteCourse(id)
-            .then(this.courseService.findAllCourses()
+            .then(()=>this.courseService.findAllCourses()
                 .then(courses => this.setState({
                     courses: courses
                 })))
     }
 
     render() {
+        console.log(this.state.courses)
         return (
             <div>
                 <NavBarAndTableHead changeView={this.onclickChangeView}/>

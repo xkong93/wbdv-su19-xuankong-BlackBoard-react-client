@@ -7,8 +7,6 @@ const HeadingWidget = ({widget, preview, updateWidget}) => {
         <div className="border">
             <h1 hidden={preview} >Heading Widget</h1>
             <div hidden={preview} className="form-group">
-                {console.log("sdsds")}
-                            {console.log(widget.id)}
 
                 <label for="HeadingText">Heading Text</label>
 

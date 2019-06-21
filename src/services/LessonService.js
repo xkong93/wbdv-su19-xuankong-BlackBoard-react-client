@@ -3,6 +3,7 @@ import lessons from './lessons.json'
 export default class LessonService {
 
     static myInstance = null;
+    url = 'http://localhost:8080/api/module/';
 
     static getInstance() {
         if (LessonService.myInstance == null) {
@@ -16,10 +17,13 @@ export default class LessonService {
         lesson['courseId'] = courseId
         lessons.push(lesson)
     }
-    findAllLessons = () =>
-        lessons
-    findAllLessonForModuleById = moduleId =>
-        lessons.filter(lesson => lesson.moduleId == moduleId)
+    // findAllLessons = () =>
+    //     lessons
+    findAllLessonForModuleById = moduleId =>{
+        return fetch(this.url + moduleId + '/' + 'lesson')
+            .then(reponse =>reponse.json());
+    }
+        // lessons.filter(lesson => lesson.moduleId == moduleId)
     updateLessonForModuleById  = (moduleId, newLesson) => {
         lessons = lessons.map(
             lesson => lesson.moduleId == moduleId ?

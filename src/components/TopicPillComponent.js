@@ -31,7 +31,6 @@ export default class TopicPillComponent extends React.Component {
   };
 
   deleteTopic = (id) => {
-    console.log(id);
     this.setState({
       topics: this.state.topics.filter(topic => topic.id != id)
     });
