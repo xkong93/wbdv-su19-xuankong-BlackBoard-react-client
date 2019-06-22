@@ -11,7 +11,7 @@ class WhiteBoard extends React.Component {
       <Router>
 
         <div>
-          <Link to="/courses">courses</Link>
+          {/*<Link to="/courses">courses</Link>*/}
           <Route exact path="/courses" component={CourseListContainer} />
 
           <Route

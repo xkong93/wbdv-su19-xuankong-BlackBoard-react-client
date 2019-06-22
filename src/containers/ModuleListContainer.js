@@ -52,7 +52,6 @@ export default class ModuleListContainer extends React.Component {
     }
 
     titleChange = (event) => {
-        console.log(event.target.value)
         this.setState({
             module: {
                 title: event.target.value

@@ -2,8 +2,7 @@
 export default class WidgetService {
     static myInstance = null;
 
-    url = 'http://localhost:8080/api/topic/';
-    url2 = 'http://localhost:8080/api/widget/';
+    url = 'http://localhost:8080/api/widget/';
 
     static getInstance() {
         if (WidgetService.myInstance == null) {
@@ -12,9 +11,8 @@ export default class WidgetService {
         return this.myInstance
     }
 
-    createWidget = (topicId,widget) => {
-        // widgets.push(widget)
-        return fetch(this.url + topicId + '/' + 'widget' , {
+    createWidget = (widget) => {
+        return fetch(this.url , {
             method: "POST",
             body: JSON.stringify(widget),
             headers: {
@@ -23,19 +21,19 @@ export default class WidgetService {
         }).then((response) => response.json())
     }
 
-    findAllWidgetsForTopicById = (topicId) => {
-        return fetch(this.url + topicId + '/' + 'widget')
+    findAllWidgets = () => {
+        return fetch(this.url)
             .then(response => response.json())        // return widgets
     }
 
 
     findWidgetById = (widgetId) => {
-        return fetch(this.url2 + '/' + widgetId)
+        return fetch(this.url + '/' + widgetId)
             .then(response => response.json());
     }
 
     updateWidget = (widgetId, newWidget) => {
-        return fetch(this.url2 +  + widgetId, {
+        return fetch(this.url + '/' + widgetId, {
             method: "PUT",
             body: JSON.stringify(newWidget),
             headers: {
@@ -46,7 +44,7 @@ export default class WidgetService {
     }
 
     deleteWidget = (widgetId) => {
-        return fetch(this.url2  + widgetId,{
+        return fetch(this.url + '/' + widgetId,{
             method:"DELETE"
         }) //.then(response => response.json()); no need then but need return
         // widgets = widgets.filter(widget => widget.id != widgetId);

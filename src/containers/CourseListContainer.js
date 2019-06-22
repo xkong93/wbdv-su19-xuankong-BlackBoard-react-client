@@ -13,6 +13,12 @@ export default class CourseListContainer extends React.Component {
         this.state = {
             courses: [],
             toggle: false,
+            course:{
+                title:"New Course",
+                owner:"me",
+                modifiedDate:"Today"
+
+            }
         };
         this.onclickChangeView = this.onclickChangeView.bind(this);
     }
@@ -40,9 +46,9 @@ export default class CourseListContainer extends React.Component {
     }
 
     createRow = (course) => {
-        this.courseService.createCourse(course)
-            .then(modules => this.setState({
-                modules: modules
+        this.courseService.createCourse(this.state.course)
+            .then(courses => this.setState({
+                courses: courses
             }))
     }
 
@@ -55,11 +61,18 @@ export default class CourseListContainer extends React.Component {
                 })))
     }
 
+    titleChange = (event) =>{
+        this.setState({
+            course:event.target.value
+        })
+    }
+
+
     render() {
-        console.log(this.state.courses)
         return (
             <div>
-                <NavBarAndTableHead changeView={this.onclickChangeView}/>
+                <NavBarAndTableHead course={this.state.course} titleChange={this.titleChange}
+                                    changeView={this.onclickChangeView} addCourse={this.createRow}/>
                 {this.state.toggle ? <CourseGrid deleteRow={this.deleteRow} courses={this.state.courses}/> :
                     <CourseListComponent deleteRow={this.deleteRow}
                                          courses={this.state.courses}/>}

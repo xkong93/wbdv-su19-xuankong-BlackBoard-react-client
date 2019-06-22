@@ -22,6 +22,7 @@ class CourseService {
             }
         }).then(response => response.json());
     }
+
     findAllCourses = () => {
         return fetch(this.url).then(response => response.json());
     }

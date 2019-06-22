@@ -15,7 +15,7 @@ const propsToDispatcher = dispatch => (
     {
         loadWidgets: () => {
             service
-                .findAllWidgetsForTopicById(1)
+                .findAllWidgets()
                 .then(widgets => dispatch({
                     type: "FIND_ALL_WIDGETS",
                     widgets: widgets
@@ -47,13 +47,12 @@ const propsToDispatcher = dispatch => (
         createWidget: () => {
             let newWidget =
                 {
-                    id: (new Date()).getTime(),
                     type: 'HEADING',
                     name: 'New Widget',
                     size: '1',
                     text: "heading demo",
                     src: "",
-                    order: "1"
+                    isOrder: "1"
                 }
 
             service
