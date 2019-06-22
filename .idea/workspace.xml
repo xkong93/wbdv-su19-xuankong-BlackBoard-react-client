@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="533bfbce-f26a-483d-8ad9-3f1675eb3ff2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../myapp" beforeDir="false" afterPath="$PROJECT_DIR$/../myapp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NavBarAndTableHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBarAndTableHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WhiteBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WhiteBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/CourseListContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/CourseListContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/ModuleListContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ModuleListContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/WidgetListContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/WidgetListContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/CourseService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/CourseService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/WidgetService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/WidgetService.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -67,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/services/CourseService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+            <state relative-caret-position="90">
+              <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -106,7 +99,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/WhiteBoard.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
@@ -277,12 +270,12 @@
       <updated>1561066850814</updated>
       <workItem from="1561066851959" duration="4000" />
       <workItem from="1561067913743" duration="763000" />
-      <workItem from="1561068828432" duration="31958000" />
+      <workItem from="1561068828432" duration="32235000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32725000" />
+    <option name="totallyTimeSpent" value="33002000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -512,13 +505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/CourseService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/WidgetListComponent.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -591,6 +577,13 @@
             <element signature="e#0#26#0" expanded="true" />
             <element signature="e#135#207#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/CourseService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="43" />
         </state>
       </provider>
     </entry>

@@ -3,7 +3,7 @@ import topics from './topics.json'
 export default class TopicService {
 
     static myInstance = null;
-    url = 'http://localhost:8080/api/lesson/';
+    url = 'https://obscure-plateau-23987.herokuapp.com/api/lesson';
 
     static getInstance() {
         if (TopicService.myInstance == null) {

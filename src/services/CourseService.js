@@ -3,7 +3,7 @@ import courses from './courses.json'
 class CourseService {
 
     static myInstance = null;
-    url = 'http://localhost:8080/api/course';
+    url = 'https://obscure-plateau-23987.herokuapp.com/api/course';
 
     static getInstance() {
         if (CourseService.myInstance == null) {

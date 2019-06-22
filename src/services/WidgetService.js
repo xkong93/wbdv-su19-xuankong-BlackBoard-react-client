@@ -2,7 +2,7 @@
 export default class WidgetService {
     static myInstance = null;
 
-    url = 'http://localhost:8080/api/widget/';
+    url = 'https://obscure-plateau-23987.herokuapp.com/api/widget/';
 
     static getInstance() {
         if (WidgetService.myInstance == null) {

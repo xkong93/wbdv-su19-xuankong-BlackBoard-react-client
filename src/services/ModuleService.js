@@ -3,8 +3,8 @@ import modules from './modules.json'
 export default class ModuleService {
 
     static myInstance = null;
-    url = 'http://localhost:8080/api/course/'
-    url2 = 'http://localhost:8080/api/module/';
+    url = 'https://obscure-plateau-23987.herokuapp.com/api/course/'
+    url2 = 'https://obscure-plateau-23987.herokuapp.com/api/module/';
 
     static getInstance() {
         if (ModuleService.myInstance == null) {
